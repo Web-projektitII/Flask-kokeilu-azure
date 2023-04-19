@@ -5,6 +5,12 @@ from flask import (Flask, redirect, render_template, request,
 
 app = Flask(__name__)
 
+DB_USERNAME = os.environ.get('AZURE_DB_USERNAME')
+DB_PASSWORD = os.environ.get('AZURE_DB_PASSWORD')
+DB_NAME = os.environ.get('AZURE_DB_NAME')
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://' + DB_USERNAME + ':' + DB_PASSWORD + '@localhost:3306/' + DB_NAME
+print("SQLALCHEMY_DATABASE_URI: "+SQLALCHEMY_DATABASE_URI)
+   
 
 @app.route('/')
 def index():
