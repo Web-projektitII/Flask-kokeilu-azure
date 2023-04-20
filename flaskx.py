@@ -4,7 +4,7 @@ from flask import (Flask, redirect, render_template, request,
                    send_from_directory, url_for)
 
 app = Flask(__name__)
-print("ALOITUS")
+print("ALOITUS: flaskx")
 DB_USERNAME = os.environ.get('AZURE_DB_USERNAME')
 DB_PASSWORD = os.environ.get('AZURE_DB_PASSWORD')
 DB_NAME = os.environ.get('AZURE_DB_NAME')
